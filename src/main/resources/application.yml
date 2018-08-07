@@ -1,0 +1,19 @@
+zuul:
+  routes:
+    test:
+      path: "/redirect"
+      url: "https://www.google.com"
+    years:
+      path: "/years"
+      url: "https://one.nhtsa.gov/webapi/api/Recalls/vehicle?format=json"
+    makes:
+      path: "/year/*"
+      url: "https://one.nhtsa.gov/webapi/api/Recalls/vehicle/modelyear"
+    models:
+      path: "/models/**"
+      url: "https://one.nhtsa.gov/webapi/api/Recalls/vehicle/modelyear"
+      # need format = json
+    recalls:
+      path: "/recalls/**"
+      url: "https://one.nhtsa.gov/webapi/api/Recalls/vehicle/modelyear"
+      #needs format = json

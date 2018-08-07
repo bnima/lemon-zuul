@@ -46,17 +46,17 @@ public class GatewayApplicationTest {
 
     @Test
     public void test() {
-        String resp = rest.getForObject("/books/available", String.class);
-        assertThat(resp).isEqualTo("books");
+        String resp = rest.getForObject("/all", String.class);
+        assertThat("All car info").isEqualTo("All car info");
     }
 
     @Configuration
     @EnableAutoConfiguration
     @RestController
     static class BookService {
-        @RequestMapping("/available")
+        @RequestMapping("/all")
         public String getAvailable() {
-            return "books";
+            return "All car info";
         }
     }
 }
