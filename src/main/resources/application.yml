@@ -6,6 +6,7 @@ zuul:
     years:
       path: "/years"
       url: "https://one.nhtsa.gov/webapi/api/Recalls/vehicle?format=json"
+      # need format = json appended
     makes:
       path: "/year/*"
       url: "https://one.nhtsa.gov/webapi/api/Recalls/vehicle/modelyear"
