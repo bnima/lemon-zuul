@@ -16,3 +16,4 @@ zuul:
     recalls:
       path: "/recalls/**"
       url: "https://one.nhtsa.gov/webapi/api/Recalls/vehicle/modelyear"
+      #needs format = json
