@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/mvn'
+  args: ['clean']
+- name: 'gcr.io/cloud-builders/mvn'
+  args: ['package']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/lemons-212516/lemons-gateway', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/lemons-212516/lemons-gateway']
+images: ['gcr.io/lemons-212516/lemons-gateway']
